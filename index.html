@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANA METAL: The Primal Runes</title>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --silver: #c0c0c0;
+            --crimson: #9e1b1b;
+            --dark-bg: #0a0a0c;
+            --card-bg: #16161a;
+            --accent-blue: #4a9eff;
+        }
+        body {
+            background-color: var(--dark-bg);
+            color: #e0e0e0;
+            font-family: 'Pretendard', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            padding: 60px 0;
+            border-bottom: 1px solid #333;
+        }
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 5px;
+            color: var(--silver);
+            text-shadow: 0 0 20px rgba(192, 192, 192, 0.5);
+            margin: 0;
+        }
+        header p {
+            color: var(--gold);
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        h2 {
+            font-size: 2rem;
+            border-left: 5px solid var(--gold);
+            padding-left: 15px;
+            margin: 40px 0 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 25px;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+        }
+        .faction-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .faction-title span {
+            font-size: 0.8rem;
+            margin-left: 10px;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+        .solaris { color: var(--accent-blue); border: 1px solid var(--accent-blue); }
+        .halo { color: #888; border: 1px solid #888; }
+        .oracle { color: var(--gold); border: 1px solid var(--gold); }
+        
+        .battleground {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1200x400');
+            background-size: cover;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 20px;
+        }
+        .battle-tag {
+            background: var(--crimson);
+            padding: 5px 15px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .card ul {
+            padding-left: 20px;
+            font-size: 0.95rem;
+        }
+        .card ul li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>MANA METAL</h1>
+        <p>EPISODE: THE PRIMAL RUNES</p>
+    </header>
+
+    <h2>THREE FACTIONS: 세력 소개</h2>
+    <div class="grid">
+        <!-- 아르카나 이지스 -->
+        <div class="card">
+            <div class="faction-title">아르카나 이지스 <span class="solaris">제국 정예</span></div>
+            <p><strong>"질서만이 인류를 보존할 것이다."</strong></p>
+            <ul>
+                <li><strong>특징:</strong> 고순도 정제 마나를 사용하는 제국의 공식 기사단입니다.</li>
+                <li><strong>무장:</strong> 전도용 합금으로 제작된 은백색 나노 갑옷을 착용합니다.</li>
+                <li><strong>액션:</strong> 마나를 압축해 발사하는 고출력 레이저 검기와 정교한 방어막 액션을 구사합니다.</li>
+            </ul>
+        </div>
+
+        <!-- 더스트 헤일로 -->
+        <div class="card">
+            <div class="faction-title">더스트 헤일로 <span class="halo">룬 용병단</span></div>
+            <p><strong>"생존은 허락받는 것이 아니라 쟁취하는 것이다."</strong></p>
+            <ul>
+                <li><strong>특징:</strong> 버려진 하층 구역과 유적에서 살아남은 무법자들입니다.</li>
+                <li><strong>무장:</strong> 고대 룬 문자가 새겨진 가죽과 강화 장갑판을 혼용합니다.</li>
+                <li><strong>액션:</strong> 룬 강화를 통한 일시적 신체 능력 폭발과 기동성 있는 암살 액션에 능합니다.</li>
+            </ul>
+        </div>
+
+        <!-- 오라클 나이트 -->
+        <div class="card">
+            <div class="faction-title">오라클 나이트 <span class="oracle">성역 수호자</span></div>
+            <p><strong>"거짓된 기술을 정화하고 태초의 빛으로 돌아가라."</strong></p>
+            <ul>
+                <li><strong>특징:</strong> 과학 기술을 배척하고 순수한 신성 마법을 맹신하는 종단입니다.</li>
+                <li><strong>무장:</strong> 마력을 저장하는 보석이 박힌 화려한 황금 중갑을 착용합니다.</li>
+                <li><strong>액션:</strong> 신성한 힘을 소환하는 광역 마법과 묵직한 중갑 파괴 액션을 선보입니다.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>BATTLEGROUNDS: 주요 전장</h2>
+    
+    <div class="battleground">
+        <div class="battle-tag">중심부</div>
+        <h3>크로마니아 제국 수도</h3>
+        <p>제국의 심장부이자 거대 마나 수정이 존재하는 곳입니다. 가장 정교한 마법 공학 시설들 사이에서 태초의 룬을 둘러싼 대규모 점령전이 벌어집니다.</p>
+    </div>
+
+    <div class="battleground">
+        <div class="battle-tag">경계선</div>
+        <h3>부식된 슬럼가 (Oxidia Zone)</h3>
+        <p>마나 포화로 인해 공간이 뒤틀리고 마력 폭풍이 몰아치는 구역입니다. 예측 불가능한 환경 변화 속에서 소규모 부대들의 게릴라전이 빈번합니다.</p>
+    </div>
+
+    <div class="battleground" style="margin-bottom: 0;">
+        <div class="battle-tag">미개척지</div>
+        <h3>황야의 태양 신전</h3>
+        <p>잊혀진 고대 룬의 발상지로, 성기사단이 수호하는 성지입니다. 이곳의 유물을 차지하기 위해 각 세력의 최정예들이 목숨을 건 결투를 벌입니다.</p>
+    </div>
+</div>
+
+</body>
+</html>
